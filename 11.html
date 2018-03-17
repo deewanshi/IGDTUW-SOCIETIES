@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SELECT</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width", initial scale="1">
+	<link rel="stylesheet" href="bootstrap-3.3.7\dist\css\bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap-3.3.7\dist\js\bootstrap.min.js"></script>
+</head>
+<body background="giphy.gif">
+<style>
+p{
+   margin-top:5px;
+   margin-bottom:5px
+}
+table,th,td {
+    border: 1px solid white;
+    border-collapse: collapse;
+background-color: #FFFFEO;
+}
+th,td{
+    padding: 2px;   
+}
+th
+{
+ font-size:40px;
+}
+td
+{ 
+ font-size:20px
+}
+table.one {
+    position: relative;
+}
+table.two {
+    position: relative;
+text-align: center;
+}
+</style>
+<form action="fetch.jsp">
+    <p align="center"><font size="50">
+    <font face="Apple Chancery"><b>WELCOME <% 
+    String msg = (String)session.getAttribute("loginname");
+    out.print(msg);%> </b></font>
+  </font></p>
+</form> 
+<% 
+  String msg1 = request.getParameter("message");
+  if(msg1!=null)
+  {%>
+
+    <div class="modal-dialog">
+            <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">X</button>
+          <h4><span class="glyphicon glyphicon-lock"></span>CONFIRMATION BOX</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <h3>Values have been submitted</h3>
+            </div>
+            <div class="form-group">
+          <button type="submit" class="btn btn-danger btn-default pull-right" data-dismiss="modal">OK</button>
+            </div>
+          </form>
+          <br>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    <%
+  }
+   %>
+
+<p align="center" style="font-size:20px;font-family: Apple Chancery;">We would love to notify you about all the events important for you so that you can mark up your dates.</p>
+<br>
+<div class="socities" align="center">
+<table class="one" class="table table-hover">
+<th style="color:black;font-family:Impact;">Choose societies
+<br>(Find your interests)</th>
+<form action="society.jsp" method="post">
+<tr style="color:black;font-family:Georgia;">
+<td>
+<div class="checkbox2">
+  <label><input type="checkbox" value="LEAN IN" name="society">Lean In</label>
+</div></td></tr>
+<tr style="color: black;font-family:Georgia;"><td>
+<div class="checkbox2">
+  <label><input type="checkbox" value="IEEE" name="society">IEEE</label>
+</div></td></tr>
+<tr style="color: black;font-family:Georgia;"><td>
+<div class="checkbox2">
+  <label><input type="checkbox" value="Technoliterati" name="society">Technoliterati</label>
+</div></td></tr>
+<tr style="color: black;font-family:Georgia;"><td>
+<div class="checkbox2">
+  <label><input type="checkbox" value="Instinct" name="society">Instinct</label>
+</div></td></tr>
+<tr style="color: black;font-family:Georgia;"><td>
+<div class="checkbox2">
+  <label><input type="checkbox" value="ACM" name="society">ACM</label>
+</div></td></tr>
+</table>
+</div>
+<br><br>
+<div class="notify" align="center">
+<table class="two">
+<th style="color: black;font-family:Impact;">How would you like <br> to receive notifications?</th>
+<tr style="color: black;font-family:Georgia;"><td>
+<div class="checkbox2">
+  <label><input type="checkbox" value="MAIL" name="notify">Mail</label>
+</div></td></tr>
+<tr style="color: black;font-family:Georgia;"><td>
+<div class="checkbox2">
+  <label><input type="checkbox" value="SMS" name="notify">SMS</label>
+</div></td></tr>
+</table></div>
+
+  <br><p align="center">
+          <button class="btn" data-toggle="modal" value="submit">OK</button></p>
+</form>
+<br>
+</body>
+</html>

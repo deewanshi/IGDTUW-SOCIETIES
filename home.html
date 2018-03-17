@@ -1,0 +1,353 @@
+<!DOCTYPE HTML>
+<%@ page import = "java.sql.*" %>
+<html lang="en">
+<head>
+  <link rel="image" href="logo.png">
+	<title>IGDTUW SOCITIES</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width", initial scale="1">
+	<link rel="stylesheet" href="bootstrap-3.3.7\dist\css\bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap-3.3.7\dist\js\bootstrap.min.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+<!--Header-->
+<header>
+	<nav class="navbar navbar-default navbar-fixed-top">
+  		<div class="container-fluid">
+			<div class="collapse navbar-collapse" id="myNavbar">
+      			<ul class="nav navbar-nav navbar-right">
+        			<li><a href="#myPage">HOME</a></li>
+        				<li><a href="#about">ABOUT</a></li>
+        			<li><a href="#socities">SOCITIES</a></li>
+        			<li><a href="#fests">FESTS</a></li>
+        			<li><a href="#login">LOGIN</a></li>
+        			<li><a href="#contact">CONTACT</a></li>
+        		</ul>
+        	</div>
+        </div>
+    </nav>
+</header>
+<!-- Slider -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+       <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="taarangana.jpg" alt="New York" width="1200" height="700">
+        <div class="carousel-caption">
+        </div>      
+      </div>
+
+      <div class="item">
+        <img src="raf.png" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+        </div>      
+      </div>
+    
+      <div class="item">
+        <img src="hypnotics.jpg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3><u><b><strong>HYPNOTICS</strong></b></u></h3>
+          <p><b><u><strong>The Western Dance Society of IGDTUW</strong></u></b></p>
+        </div>      
+      </div>
+       <div class="item">
+        <img src="innerve1.jpg" alt="Chicago" width="1200" height="700">
+        <div class="carousel-caption">
+        </div>      
+      </div>
+    
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" data-toggle="tooltip" title="Previous">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" data-toggle="tooltip" title="Next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- Container (About us) -->
+<div id="about" class="bg-1">
+<div class="container text-center">
+  <h4><u><font size="6">ABOUT US</font></u></h4>
+  <br><br>
+  <p><font size="5"><em>It isn't every day that you read your messages on your WhatsApp groups thoroughly.<br>
+Do you often miss important events organized in the college?<br>
+We intend to provide you the list of all the activities going on or lined up in IGDTUW.<br>
+Get notified<br> 
+and<br>
+never miss an event!<br>
+</em></font></p>
+  <br>
+</div>
+</div>
+<!-- Container (Socities) -->
+<div id="socities" class="container text-center">
+  <h3><u><font size="6">SOCITIES</font></u></h3>
+  <p><em><font size="5">Activities organized by different societies and clubs play an indispensable role in channelising the energies of students in the right ditrection and hence help in exploring their interests.</font></em></p>
+  <a role="button" data-toggle="tooltip" title="Up" href="new calender.html">
+    <p align="right" class="more" style="display: inline-block; float: left;"><font size="5">Upcoming events<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></font></p>
+    </a>
+   <a role="button" data-toggle="tooltip" title="More" href="second.html">
+    <p align="right" class="more" style="display: inline-block; float: right;"><font size="5">More<span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></font></p>
+    </a>
+  </div>
+<!-- Container (Fests) -->
+<div id="fests" class="bg-1">
+<div class="container text-center">
+    <h3><u><font size="6">FESTS</font></u></h3>
+  <p><em><font size="5">The most awaited fest of <b><em>IGDTUW</em></b> is TAARANGANA-The Cultural Extravaganza held in the month of February
+and the much anticipated one,<b><em>INNERVE</em></b> is the Technical fest held is the month of October.</font>
+</em></p>
+  <p></p>
+  <br>
+<div class="row">
+    <div class="col-sm-6">
+      <p class="text-center"><strong><font size="5">INNERVE</font></strong></p><br>
+      <a href="http://www.innerve-igdtuw.com/">
+        <img src="innerve1.jpg" class="img-circle person" alt="Innerve">
+      </a>
+    </div>
+    <div class="col-sm-6">
+      <p class="text-center"><strong><font size="5">TARRANGANA</font></strong></p><br>
+      <a href="http://www.taarangana.com/">
+        <img src="taarangana.jpg" class="img-circle person" alt="Taarangana">
+      </a>
+    </div>
+</div>
+</div>
+</div>
+<!-- Container (Login) -->
+<div id="login">
+  <div class="container">
+    <h3 class="text-center"><u><font size="5">LOGIN</font></u></h3>
+    <p class="text-center"><font size="5">You can login here.<br> Remember you have your account!</font></p>
+    <form role="form" action="login.jsp" method="post">
+          	<div class="form-group">
+              <label for="usr"><font size="5">User Name</font></label>
+              <input type="name" class="form-control" id="name" placeholder="username" name="name">
+            </div>
+            <div class="form-group">
+              <label for="pw"><font size="5">Password</font></label>
+              <input type="password" class="form-control" id="pass" placeholder="password" name="pass">
+            </div>
+            <div class="form-group">
+  				<button type="submit" class="btn btn-danger btn-default pull-right" value="submit">Submit</button>
+            </div>
+          </form>
+          <br><br>
+    <div class="row text-center">
+      <div class="col-sm-6">
+        <div class="thumbnail">
+          <p><strong>Sign Up</strong></p>
+          <p>If not registered sign up now</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal1">Register</button>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="thumbnail">
+          <p><strong>Forgot Password</strong></p>
+          <p>Not remember password.Click here</p>
+          <button class="btn" data-toggle="modal" data-target="#myModal">Forgot Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <!-- Modal(Sign up) -->
+  <div class="modal fade" id="myModal1" role="dialog">
+    <div class="modal-dialog"> 
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">X</button>
+          <h4><span class="glyphicon glyphicon-lock"></span>Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form" method="post" action="register.jsp">
+          	<div class="form-group">
+              <label for="usr">User Name</label>
+              <input type="name" class="form-control" id="name" placeholder="user name" name="name">
+            </div>
+            <div class="form-group">
+              <label for="pw">Password</label>
+              <input type="password" class="form-control" id="pass" placeholder="password" name="pass">
+            </div>
+            <div class="form-group">
+              <label for="cpw">Confirm Password</label>
+              <input type="password" class="form-control" id="cpass" placeholder="confirm password" name="cpass">
+            </div>
+            <div class="form-group">
+              <label for="email">Email Id</label>
+              <input type="email" class="form-control" id="email" placeholder="email@example.com" name="email">
+            </div>
+            <div class="form-group">
+              <label for="mno">Mobile No</label>
+              <input type="number" class="form-control" id="mno" placeholder="mobile number" name="mno">
+            </div>
+            <div class="form-group">
+  				<button type="submit" class="btn btn-danger btn-default pull-right" value="Submit">Submit</button>
+            </div>
+          </form>
+          <br>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- Modal(forgot password) -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">X</button>
+          <h4><span class="glyphicon glyphicon-lock"></span>Forgot Password</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form" action="forgot.jsp" method="post">
+            <div class="form-group">
+              <label for="email">Email Id</label>
+              <input type="email" class="form-control" id="email" name="email"placeholder="email@example.com">
+            </div>
+            <div class="form-group">
+  				<button type="submit" class="btn btn-danger btn-default pull-right" value="submit">Send</button>
+            </div>
+          </form>
+          <br>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Container (Contact Section) -->
+<div id="contact" class="bg-1">
+<div class="container">
+  <h3 class="text-center"><u><font size="6">Contact</font></u></h3>
+  <p class="text-center"><em><font size="5">Happy to welcome you!</font></em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p><font size="4">Drop a note.</font></p>
+      <p><span class="glyphicon glyphicon-map-marker"></span><font size="4">Kashmere Gate,Delhi</font></p>
+      <p><span class="glyphicon glyphicon-phone"></span><font size="4">Phone: +00 1515151515</font></p>
+      <p><span class="glyphicon glyphicon-envelope"></span><font size="4">Email: mail@mail.com</font></p>
+    </div>
+    <form action="MAILTO:jaspreet.k.c1996@gmail.com">
+    <div class="col-md-8">
+      <div class="row">
+      <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="subject" placeholder="Name" type="text" required>
+      </div>
+      <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+      </div>
+    </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn btn-primary pull-right" type="submit" value="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+  </div>
+</div>
+  <!--Footer nav bar-->
+<div class="container">
+   <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#home"><font size="5">Feedback</font></a></li>
+    <li><a data-toggle="tab" href="#menu1"><font size="5">Web Development Team</font></a></li>
+  </ul>
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+      <br>
+      <p style="padding-left: 10px; margin-left: 10px;"><font size="5">Happy to get feedback from you.</font></p>
+      <form action="contact.jsp">
+      <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Feedback" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn btn-primary pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+</div>
+      <div id="menu1" class="tab-pane fade">
+        <br>
+      <p align="center"><font size="5">Hope you got all the information which you were looking for.</font></p>
+      <div class="row">
+      <div class="col-md-2 col-md-offset-1">  
+      <img src="2222.jpg" class="img-circle person1" alt="Deewanshi" width=150 height=150>
+      <h5 align="center"><em><b>Deewanshi Grover</b></em></h5>
+      </div>
+      <div class="col-md-2">
+      <img src="Jaspreet.jpg" class="img-circle person1" alt="Jaspreet" width=150 height=150>
+      <h5 align="center"><em><b>Jaspreet Kaur</b></em></h5>
+      </div>
+      <div class="col-md-2">
+      <img src="Khushbu (1).jpg" class="img-circle person1" alt="Khushbu" width=150 height=150>
+      <h5 align="center"><em><b>Khushbu Yadav</b></em></h5>
+      </div>
+      <div class="col-md-2">
+      <img src="koshima11.jpg" class="img-circle person1" alt="Koshima" width=150 height=150>
+      <h5 align="center"><em><b>Koshima Goyal</b></em></h5>
+      </div>
+      <div class="col-md-2">
+      <img src="niks1.jpg" class="img-circle person1" alt="Nikita" width=150 height=150>
+      <h5 align="center"><em><b>Nikita Joshi</b></em></h5>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a><br><br>
+  <div align="center">
+  <a href="http://www.igdtuw.ac.in/"><p font size="4" style="display: inline-block; float: left; margin-left: 390px;"><b>IGDTUW</b></p></a>
+  <a href="http://www.anveshanfoundation.org/"><p font size="4" style="display: inline-block; float: right;
+  margin-right: 270px;"><b>ANVESHAN FOUNDATION</b></p></a>
+</div>
+<br>
+  <p font size="4"><b>Copy@IGDTUW</b></p> 
+</footer>
+</body>
+</html>
